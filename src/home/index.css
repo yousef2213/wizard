@@ -81,7 +81,7 @@
   position: relative;
 }
 
-/* Update */
+/*  */
 .ant-steps {
   border-bottom: 2px solid #bc92ff;
   z-index: 99;
@@ -96,14 +96,37 @@
 }
 
 .ant-steps-item-active::before {
-  content: "v";
-  background-size: cover;
+  border-right: 2px solid;
+  content: "";
+  display: block;
+  height: 2rem;
   position: absolute;
-  width: 2rem;
-  height: 10px;
-  background-image: url("./arrow.png");
-  bottom: -10px;
+  color: #bc92ff;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(90deg);
+  width: 0;
+  bottom: -17px;
   left: 40%;
+}
+
+.ant-steps-item-active::after {
+  border-right: 18px solid;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  content: "";
+  display: block;
+  height: 7px;
+  position: absolute;
+  color: #bc92ff;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(0deg);
+  width: 0;
+  bottom: -7px;
+  left: 39%;
 }
 
 .ant-steps-item-container {
